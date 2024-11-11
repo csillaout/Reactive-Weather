@@ -1,7 +1,7 @@
 import React from "react";
 import sunny from "../assets/Sunny.svg";
 
-function WeatherCard(city) {
+function WeatherCard(props) {
   return (
     <div className="card">
       <div className="img-container">
@@ -13,9 +13,9 @@ function WeatherCard(city) {
         />
       </div>
       <div class="card-body">
-        <h3 className="card-title">{city.city}</h3>
-        <h5 className="card-text">{city.temperature}</h5>
-        <h5 className="card-text">{city.forecast}</h5>
+        <h3 className="card-title">{props.data.city}</h3>
+        <h5 className="card-text">{props.data.temperature}</h5>
+        <h5 className="card-text">{props.data.forecast}</h5>
       </div>
     </div>
   );
