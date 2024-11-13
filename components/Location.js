@@ -3,7 +3,7 @@ import React from "react";
 
 function Location({ data, location }) {
   const locationData = data.find((city) => city.city === location);
-  if (!locationData) return null;
+  if (!locationData) return <p>Location not found</p>;
   return (
     <div className="card">
       <div className="img-container">
